@@ -20,8 +20,8 @@ export default function generateProductFeed(productsData: ProductsData): Feed {
       "https://cdn.shopify.com/s/files/1/0058/4538/5314/files/LTT_Logo.png",
     generator: "https://github.com/stevenmqnguyen/lttstorefeed",
     feedLinks: {
-      rss: "https://lttfeed.vercel.app/api/rss",
-      atom: "https://lttfeed.vercel.app/api/atom",
+      rss: "https://lttstorefeed.vercel.app/api/rss",
+      atom: "https://lttstorefeed.vercel.app/api/atom",
     },
   });
 
