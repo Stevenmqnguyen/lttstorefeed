@@ -1,11 +1,9 @@
-import { productsSchema, type productSchema } from "./schema"; // import both schemas from a different file
+import { type Collection, productsSchema, type productSchema } from "./schema"; // import both schemas from a different file
 import axios from "axios";
 import { z } from "zod";
 
-type Collection = "all" | "gear" | "clothing";
-
 export default async function fetchProducts(
-  collection: Collection,
+  collection: Collection
 ): Promise<z.infer<typeof productsSchema>> {
   let page = 1; // start on page 1 since page 0 is identical to page 1
   const allProducts: z.infer<typeof productSchema>[] = [];
@@ -13,7 +11,7 @@ export default async function fetchProducts(
 
   while (hasMoreData) {
     const response = await axios.get(
-      `https://www.lttstore.com/collections/${collection}/products.json?page=${page}`,
+      `https://www.lttstore.com/collections/${collection}/products.json?page=${page}`
     );
     try {
       const verifiedData = productsSchema.parse(response.data);

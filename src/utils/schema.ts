@@ -1,5 +1,7 @@
 import * as z from "zod";
 
+export type Collection = "all" | "gear" | "clothing";
+
 const optionSchema = z.object({
   name: z.string(),
   position: z.number(),
