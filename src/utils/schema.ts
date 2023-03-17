@@ -1,5 +1,7 @@
 import * as z from "zod";
 
+export type Collection = "all" | "accessories" | "clothing"; // gear tab refers to the accessoeries collection per lttstore.com
+
 const optionSchema = z.object({
   name: z.string(),
   position: z.number(),

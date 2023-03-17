@@ -8,8 +8,24 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  const { collection } = req.query;
   try {
-    const products = await fetchProducts("all");
+    let products;
+    switch (collection) {
+      case "all":
+        products = await fetchProducts(collection);
+        break;
+      case "accessories":
+        products = await fetchProducts(collection);
+        break;
+      case "clothing":
+        products = await fetchProducts(collection);
+        break;
+      default:
+        res.status(400).json({ error: "Not a valid feed" });
+        return;
+    }
+
     const parseResult = productsSchema.safeParse(products);
     if (parseResult.success) {
       res.setHeader(
@@ -17,7 +33,7 @@ export default async function handler(
         "s-maxage=1800, stale-while-revalidate=300"
       ); // cache is fresh for 30 min, serve stale data for up to 5 min while revalidating
       res.setHeader("content-type", "application/atom+xml");
-      res.status(200).send(generateProductFeed(products).atom1());
+      res.status(200).send(generateProductFeed(products, collection).atom1());
     } else {
       throw parseResult.error;
     }
