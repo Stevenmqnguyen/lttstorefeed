@@ -5,7 +5,7 @@ import { productsSchema } from "./schema";
 type ProductsData = z.infer<typeof productsSchema>;
 
 export default function generateProductFeed(
-  productsData: ProductsData,
+  productsData: ProductsData
 ): string {
   // Validate data against schema
   const products = productsSchema.parse(productsData);
@@ -13,7 +13,7 @@ export default function generateProductFeed(
   const feed = new Feed({
     title: "Linus Tech Tips Store",
     description: "A feed of products from lttstore.com",
-    link: "https://example.com/feed",
+    link: "https://lttstorefeed.vercel.app/api/rss",
     id: "",
     copyright: "",
     favicon:
