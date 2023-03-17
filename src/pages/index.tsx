@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-between overflow-clip overscroll-none bg-black">
+    <div className="min-w-screen flex flex-col items-center justify-between overflow-clip overscroll-none bg-black min-h-screen-ios">
       <Head>
         <title>lttstore.com feed</title>
         <meta
