@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex h-screen flex-col justify-between bg-black">
+    <div className="flex h-screen w-screen flex-col items-center justify-between overflow-clip overscroll-none bg-black">
       <Head>
         <title>lttstore.com feed</title>
         <meta
@@ -14,10 +14,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div />
-      <main className="flex flex-col items-center justify-center">
+      <main className="flex flex-col items-center justify-center px-3">
         {/* <div className="container flex flex-col items-center"> */}
-        <div className="flex flex-col  gap-5 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-400 via-fuchsia-600 to-rose-600 bg-clip-text text-transparent">
-          <h1 className="text-6xl font-extrabold uppercase">
+        <div className="flex flex-col gap-5 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-400 via-fuchsia-600 to-rose-600 bg-clip-text text-transparent">
+          <h1 className="mb-4 text-5xl font-extrabold uppercase">
             <a href="https://lttstore.com">lttstore.com</a> Feed
           </h1>
           {/* <p className="bg-gradient-to-l from-teal-800 via-fuchsia-500 to-rose-600 bg-clip-text text-xl font-extrabold uppercase text-transparent">
@@ -46,15 +46,13 @@ const Home: NextPage = () => {
         </div>
         {/* </div> */}
       </main>
-      <footer className=" flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center text-xs text-white">
-          <p>Made with ❤️</p>
-          <p>
-            This app is not affiliated with or endorsed by Linus Media Group
-            Inc., Creator Warehouse Inc., or Floatplane Inc. All content and
-            trademarks belong to their respective owners.
-          </p>
-        </div>
+      <footer className=" flex flex-col items-center justify-center text-center text-xs text-gray-400">
+        <p>Made with ❤️</p>
+        <p>
+          This app is not affiliated with or endorsed by Linus Media Group Inc.,
+          Creator Warehouse Inc., or Floatplane Inc. All content and trademarks
+          belong to their respective owners.
+        </p>
       </footer>
     </div>
   );
