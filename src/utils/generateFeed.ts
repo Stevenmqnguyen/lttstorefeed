@@ -11,16 +11,22 @@ export default function generateProductFeed(
   // Validate data against schema
   const products = productsSchema.parse(productsData);
 
-  const title =
-    collection === "all"
-      ? "Linus Tech Tips Store "
-      : `Linus Tech Tips Store | ${
-          collection.charAt(0).toUpperCase() + collection.slice(1)
-        }`;
+  let title;
+
+  switch (collection) {
+    case "accessories":
+      title = "Linus Tech Tips Store | Gear";
+      break;
+    case "clothing":
+      title = "Linus Tech Tips Store | Clothing";
+      break;
+    default:
+      title = "LInus Tech Tips Store";
+  }
 
   const feed = new Feed({
     title,
-    description: "A feed of products from lttstore.com",
+    description: `A feed of products from lttstore.com`,
     link: `https://lttstorefeed.vercel.app/api/feed/${collection}`,
     id: "https://lttstore.com/",
     copyright: "",
