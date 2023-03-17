@@ -14,10 +14,7 @@ export default function generateProductFeed(productsData: ProductsData): Feed {
     link: "https://lttstorefeed.vercel.app/api/feed",
     id: "https://lttstore.com/",
     copyright: "",
-    favicon:
-      "https://cdn.shopify.com/s/files/1/0058/4538/5314/files/favicon-32x32.png?crop=center&height=32&v=1614308376&width=32",
-    image:
-      "https://cdn.shopify.com/s/files/1/0058/4538/5314/files/LTT_Logo.png",
+    favicon: "https://lttstorefeed.vercel.app/favicon.ico",
     generator: "https://github.com/stevenmqnguyen/lttstorefeed",
     feedLinks: {
       atom: "https://lttstorefeed.vercel.app/api/feed",
