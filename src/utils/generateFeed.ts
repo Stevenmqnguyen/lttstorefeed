@@ -11,7 +11,7 @@ export default function generateProductFeed(productsData: ProductsData): Feed {
   const feed = new Feed({
     title: "Linus Tech Tips Store",
     description: "A feed of products from lttstore.com",
-    link: "https://lttstorefeed.vercel.app/api/rss",
+    link: "https://lttstorefeed.vercel.app/api/feed",
     id: "https://lttstore.com/",
     copyright: "",
     favicon:
@@ -20,8 +20,7 @@ export default function generateProductFeed(productsData: ProductsData): Feed {
       "https://cdn.shopify.com/s/files/1/0058/4538/5314/files/LTT_Logo.png",
     generator: "https://github.com/stevenmqnguyen/lttstorefeed",
     feedLinks: {
-      rss: "https://lttstorefeed.vercel.app/api/rss",
-      atom: "https://lttstorefeed.vercel.app/api/atom",
+      atom: "https://lttstorefeed.vercel.app/api/feed",
     },
   });
 
