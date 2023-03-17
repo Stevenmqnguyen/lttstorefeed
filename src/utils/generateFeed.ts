@@ -4,9 +4,7 @@ import { productsSchema } from "./schema";
 
 type ProductsData = z.infer<typeof productsSchema>;
 
-export default function generateProductFeed(
-  productsData: ProductsData
-): string {
+export default function generateProductFeed(productsData: ProductsData): Feed {
   // Validate data against schema
   const products = productsSchema.parse(productsData);
 
@@ -14,12 +12,17 @@ export default function generateProductFeed(
     title: "Linus Tech Tips Store",
     description: "A feed of products from lttstore.com",
     link: "https://lttstorefeed.vercel.app/api/rss",
-    id: "",
+    id: "https://lttstore.com/",
     copyright: "",
     favicon:
       "https://cdn.shopify.com/s/files/1/0058/4538/5314/files/favicon-32x32.png?crop=center&height=32&v=1614308376&width=32",
     image:
       "https://cdn.shopify.com/s/files/1/0058/4538/5314/files/LTT_Logo.png",
+    generator: "https://github.com/stevenmqnguyen/lttstorefeed",
+    feedLinks: {
+      rss: "https://lttfeed.vercel.app/api/rss",
+      atom: "https://lttfeed.vercel.app/api/atom",
+    },
   });
 
   products.products.forEach((product) => {
@@ -51,6 +54,6 @@ export default function generateProductFeed(
     });
   });
 
-  // Generate RSS feed
-  return feed.rss2();
+  // Generate feed
+  return feed;
 }

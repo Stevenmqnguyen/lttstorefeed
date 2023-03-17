@@ -16,7 +16,7 @@ export default async function handler(
       //   "Cache-Control",
       //   "s-maxage=1800, stale-while-revalidate=300",
       // ); // cache is fresh for 30 min, serve stale data for up to 5 min while revalidating
-      res.status(200).send(generateProductFeed(products).rss2());
+      res.status(200).send(generateProductFeed(products).atom1());
     } else {
       throw parseResult.error;
     }
