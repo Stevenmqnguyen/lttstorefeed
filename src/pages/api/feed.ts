@@ -12,10 +12,10 @@ export default async function handler(
     const products = await fetchProducts("all");
     const parseResult = productsSchema.safeParse(products);
     if (parseResult.success) {
-      // res.setHeader(
-      //   "Cache-Control",
-      //   "s-maxage=1800, stale-while-revalidate=300",
-      // ); // cache is fresh for 30 min, serve stale data for up to 5 min while revalidating
+      res.setHeader(
+        "Cache-Control",
+        "s-maxage=1800, stale-while-revalidate=300"
+      ); // cache is fresh for 30 min, serve stale data for up to 5 min while revalidating
       res.setHeader("content-type", "application/atom+xml");
       res.status(200).send(generateProductFeed(products).atom1());
     } else {
