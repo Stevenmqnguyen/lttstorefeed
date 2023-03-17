@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .svg-gradient {
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
   background: radial-gradient(ellipse at top right, var(--tw-gradient-stops));
   -webkit-mask-image: url(../../public/rss-solid.svg);
   mask-image: url(../../public/rss-solid.svg);

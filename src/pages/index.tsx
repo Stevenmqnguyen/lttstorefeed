@@ -24,23 +24,32 @@ const Home: NextPage = () => {
               <p className="text-xl font-bold uppercase text-transparent">
                 All Products Feed
               </p>
-              <div className="svg-gradient ml-1 h-20 w-20" />
+              <div className="svg-gradient ml-1" />
             </div>
           </a>
           <a href="https://lttstorefeed.vercel.app/api/feed">
-            <p className="text-xl font-extrabold uppercase text-transparent">
-              Gear Products Feed
-            </p>
+            <div className="flex flex-row items-center">
+              <p className="text-xl font-bold uppercase text-transparent">
+                Gear Products Feed
+              </p>
+              <div className="svg-gradient ml-1" />
+            </div>
           </a>
           <a href="https://lttstorefeed.vercel.app/api/feed">
-            <p className="text-xl font-extrabold uppercase text-transparent">
-              Clothing Products Feed
-            </p>
+            <div className="flex flex-row items-center">
+              <p className="text-xl font-bold uppercase text-transparent">
+                Clothing Products Feed
+              </p>
+              <div className="svg-gradient ml-1" />
+            </div>
           </a>
           <a href="https://lttstorefeed.vercel.app/api/feed">
-            <p className="text-xl font-extrabold uppercase text-transparent">
-              The Newsletter Feed
-            </p>
+            <div className="flex flex-row items-center">
+              <p className="text-xl font-bold uppercase text-transparent">
+                The Newsletter Feed
+              </p>
+              <div className="svg-gradient ml-1" />
+            </div>
           </a>
         </div>
       </main>
