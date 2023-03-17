@@ -27,6 +27,24 @@ const Home: NextPage = () => {
           content="A feed of products from lttstore.com"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="LTTSTORE Feed"
+          href="/api/feed/all"
+        />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="LTTSTORE Feed | Gear"
+          href="/api/feed/accessories"
+        />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="LTTSTORE Feed | Clothing"
+          href="/api/feed/clothing"
+        />
       </Head>
       <div />
       <main className="flex flex-col items-center justify-center px-3">
