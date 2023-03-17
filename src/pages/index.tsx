@@ -16,9 +16,7 @@ const Home: NextPage = () => {
       <div />
       <main className="flex flex-col items-center justify-center">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="text-6xl font-bold uppercase">
-            lttstore.com Feed Generator
-          </h1>
+          <h1 className="text-6xl font-bold uppercase">lttstore.com Feed</h1>
           <a
             href="https://lttstorefeed.vercel.app/api/feed"
             className="uppercase underline"
