@@ -21,7 +21,7 @@ export default function generateProductFeed(
       title = "Linus Tech Tips Store | Clothing";
       break;
     default:
-      title = "LInus Tech Tips Store";
+      title = "Linus Tech Tips Store";
   }
 
   const feed = new Feed({
