@@ -35,7 +35,10 @@ const Home: NextPage = () => {
             <a href="https://lttstore.com">lttstore.com</a> Feed
           </h1>
           <FeedLink content="All Products Feed" feedUrl="/api/feed/all" />
-          <FeedLink content="Gear Products Feed" feedUrl="/api/feed/gear" />
+          <FeedLink
+            content="Gear Products Feed"
+            feedUrl="/api/feed/accessories" // gear tab refers to the accessoeries collection per lttstore.com
+          />
           <FeedLink
             content="Clothing Products Feed"
             feedUrl="/api/feed/clothing"

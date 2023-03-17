@@ -15,7 +15,7 @@ export default async function handler(
       case "all":
         products = await fetchProducts(collection);
         break;
-      case "gear":
+      case "accessories":
         products = await fetchProducts(collection);
         break;
       case "clothing":
