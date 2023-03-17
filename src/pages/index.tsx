@@ -1,16 +1,19 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 
 const FeedLink = (props: { content: string; feedUrl: string }) => {
   return (
-    <a href={props.feedUrl}>
+    // <a href={props.feedUrl}>
+    <Link href={props.feedUrl}>
       <div className="flex flex-row items-center">
         <p className="text-xl font-bold uppercase text-transparent">
           {props.content}
         </p>
         <div className="svg-gradient ml-1" />
       </div>
-    </a>
+    </Link>
+    // </a>
   );
 };
 
@@ -31,21 +34,11 @@ const Home: NextPage = () => {
           <h1 className="mb-4 text-5xl font-extrabold uppercase">
             <a href="https://lttstore.com">lttstore.com</a> Feed
           </h1>
-          <FeedLink
-            content="All Products Feed"
-            feedUrl="https://lttstorefeed.vercel.app/api/feed"
-          />
-          <FeedLink
-            content="Gear Products Feed"
-            feedUrl="https://lttstorefeed.vercel.app/api/feed?filter=gear"
-          />
+          <FeedLink content="All Products Feed" feedUrl="/api/feed/all" />
+          <FeedLink content="Gear Products Feed" feedUrl="/api/feed/gear" />
           <FeedLink
             content="Clothing Products Feed"
-            feedUrl="https://lttstorefeed.vercel.app/api/feed?filter=clothing"
-          />
-          <FeedLink
-            content="The Newsletter Archive Feed"
-            feedUrl="https://lttstorefeed.vercel.app/api/newsletterfeed"
+            feedUrl="/api/feed/clothing"
           />
         </div>
       </main>

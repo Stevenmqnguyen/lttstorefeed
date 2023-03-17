@@ -8,8 +8,24 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  const { category } = req.query;
   try {
-    const products = await fetchProducts("all");
+    let products;
+    switch (category) {
+      case "all":
+        products = await fetchProducts(category);
+        break;
+      case "gear":
+        products = await fetchProducts(category);
+        break;
+      case "clothing":
+        products = await fetchProducts(category);
+        break;
+      default:
+        res.status(400).json({ error: "Not a valid feed" });
+        return;
+    }
+
     const parseResult = productsSchema.safeParse(products);
     if (parseResult.success) {
       res.setHeader(
