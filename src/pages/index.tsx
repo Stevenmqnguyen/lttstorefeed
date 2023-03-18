@@ -64,7 +64,9 @@ const Home: NextPage = () => {
         </div>
       </main>
       <footer className=" flex flex-col items-center justify-center text-center text-xs text-gray-400">
-        <p>Made with ❤️</p>
+        <Link href="https://github.com/stevenmqnguyen">
+          Made with ❤️ by stevenmqnguyen
+        </Link>
         <p>
           This app is not affiliated with or endorsed by Linus Media Group Inc.,
           Creator Warehouse Inc., or Floatplane Inc. All content and trademarks
